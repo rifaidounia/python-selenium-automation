@@ -4,17 +4,17 @@ from time import sleep
 
 
 @when ('click on account button')
-  def click_account_button(context):
+def click_account_button(context):
     context.driver.find_element(By.CSS_SELECTOR, "a[aria-label='Account, sign in']").click()
 
 
 @when('click on signin button')
-  def click_signin_button(context):
+def click_signin_button(context):
     context.driver.find_element(By.CSS_SELECTOR, "button[data-test='accountNav-signIn']").click()
 
 
 @then('signin button is displayed')
-  def signin_button(context):
+def signin_button(context):
     expected_result = "login"
     actual_result = context.driver.find_element(By.CSS_SELECTOR, "#login").button
     print(actual_result)

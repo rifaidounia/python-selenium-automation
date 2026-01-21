@@ -6,8 +6,8 @@ HEADER_LINKS = (By.CSS_SELECTOR, "[data-test*='@web/GlobalHeader/UtilityHeader/'
 
 
 @when('Click on cart icon')
-def click_cart_icon(context):
-    context.app.click_cart_icon
+def click_cart(context):
+    context.app.header.click_cart()
 
 
 @when('Search for {product}')
